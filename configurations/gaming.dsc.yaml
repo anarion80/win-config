@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify min OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+# Set Windows Settings
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      directives:
+        description: Enable Developer Mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+# Install GPU Applications
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: NvidiaGeForceExperience
+      directives:
+        description: Install Nvidia GeForce Experience
+        allowPrerelease: true
+      settings:
+        id: Nvidia.GeForceExperience
+        source: winget
+# Install Apps
+# Epic
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: EpicGamesLauncher
+      directives:
+        description: Install Epic Games Launcher
+        allowPrerelease: true
+      settings:
+        id: EpicGames.EpicGamesLauncher
+        source: winget
+# Steam
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Steam
+      directives:
+        description: Install Steam Launcher
+        allowPrerelease: true
+      settings:
+        id: Valve.Steam
+        source: winget
+
+# GOG
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GOG
+      directives:
+        description: Install GOG Galaxy
+        allowPrerelease: true
+      settings:
+        id: GOG.Galaxy
+        source: winget
+
+# Ubisoft Connect
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: UbisoftConnect
+      directives:
+        description: Install Ubisoft Connect
+        allowPrerelease: true
+      settings:
+        id: Ubisoft.Connect
+        source: winget
+
+# Moonlight
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Moonlight
+      directives:
+        description: Install Moonlight
+        allowPrerelease: true
+      settings:
+        id: MoonlightGameStreamingProject.Moonlight
+        source: winget
+
+# Sunshine
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Sunshine
+      directives:
+        description: Install Sunshine
+        allowPrerelease: true
+      settings:
+        id: LizardByte.Sunshine
+        source: winget
+  configurationVersion: 0.2.0
