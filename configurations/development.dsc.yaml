@@ -84,10 +84,10 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Python
       directives:
-        description: Install Python 3.10
+        description: Install Python 3.12
         allowPrerelease: true
       settings:
-        id: Python.Python.3.10
+        id: Python.Python.3.12
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Node
@@ -112,6 +112,14 @@ properties:
         allowPrerelease: true
       settings:
         id: GitHub.GitLFS
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: AWS CLI
+      directives:
+        description: Install AWS CLI
+        allowPrerelease: true
+      settings:
+        id: Amazon.AWSCLI
         source: winget
     # Install Development Applications
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -138,15 +146,14 @@ properties:
       settings:
         id: Anysphere.Cursor
         source: winget
-    # Install additional Dev/Debug Applications
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   id: gitkraken
-    #   directives:
-    #     description: Install GitKraken
-    #     allowPrerelease: true
-    #   settings:
-    #     id: Axosoft.GitKraken
-    #     source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Hoppscotch
+      directives:
+        description: Install Hoppscotch
+        allowPrerelease: true
+      settings:
+        id: hoppscotch.Hoppscotch
+        source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: windowsTerminal
       directives:
@@ -186,6 +193,14 @@ properties:
         allowPrerelease: true
       settings:
         id: GnuPG.Gpg4win
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GNUPG
+      directives:
+        description: Install GNUPG
+        allowPrerelease: true
+      settings:
+        id: GnuPG.GnuPG
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Github CLI
@@ -235,6 +250,14 @@ properties:
       settings:
         id: Microsoft.PowerToys
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: FiddlerClassic
+      directives:
+        description: Install Telerik Fiddler Classic
+        allowPrerelease: true
+      settings:
+        id: Telerik.Fiddler.Classic
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:
@@ -244,6 +267,10 @@ properties:
         GetScript: |
           # Not using this at the moment.
         TestScript: |
+          # Ignore deprecation warnings & reload path
+          $env:NODE_OPTIONS="--no-deprecation"
+          $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+
           # Load required extensions from JSON file
           $jsonContent = Get-Content '${WinGetConfigRoot}\configuration-vscode-extensions.json' -Raw
           $extensions = (ConvertFrom-Json $jsonContent).extensions
