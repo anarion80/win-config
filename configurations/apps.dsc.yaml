@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: chrome
+      directives:
+        description: Install Chrome
+        allowPrerelease: true
+      settings:
+        id: Google.Chrome
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: GitHubDesktop
+      directives:
+        description: Install GitHub Desktop
+        allowPrerelease: true
+      settings:
+        id: GitHub.GitHubDesktop
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: WinMerge
+      directives:
+        description: Install WinMerge
+        allowPrerelease: true
+      settings:
+        id: WinMerge.WinMerge
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: AstroGrep
+      directives:
+        description: Install AstroGrep
+        allowPrerelease: true
+      settings:
+        id: AstroComma.AstroGrep
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ScreenToGif
+      directives:
+        description: Install ScreenToGif
+        allowPrerelease: true
+      settings:
+        id: NickeManarin.ScreenToGif
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Notepad2
+      directives:
+        description: Install Notepad2
+        allowPrerelease: true
+      settings:
+        id: zufuliu.notepad2
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: PowerToys
+      directives:
+        description: Install PowerToys
+        allowPrerelease: true
+      settings:
+        id: Microsoft.PowerToys
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: JetBrains.Rider
+      directives:
+        description: Install JetBrains.Rider
+        allowPrerelease: true
+      settings:
+        id: JetBrains.Rider
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Dropbox.Dropbox
+      directives:
+        description: Install Dropbox
+        allowPrerelease: true
+      settings:
+        id: Dropbox.Dropbox
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: dotPDNLLC.paintdotnet
+      directives:
+        description: Install paintdotnet
+        allowPrerelease: true
+      settings:
+        id: dotPDNLLC.paintdotnet
+        source: winget
+  configurationVersion: 0.2.0

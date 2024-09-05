@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    - resource: PSDscResources/WindowsOptionalFeature
+      directives:
+        description: Install WSL
+      settings:
+        name: Microsoft-Windows-Subsystem-Linux
+        ensure: Present
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Ubuntu 22.04 LTS (WSL)
+        allowPrerelease: true
+      settings:
+        id: Canonical.Ubuntu.2204
+        source: winget
+
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Windows Terminal Preview
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsTerminal.Preview
+        source: winget
