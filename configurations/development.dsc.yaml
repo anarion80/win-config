@@ -258,6 +258,30 @@ properties:
       settings:
         id: Telerik.Fiddler.Classic
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: HxD
+      directives:
+        description: Install HxD
+        allowPrerelease: true
+      settings:
+        id: MHNexus.HxD
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Zeal
+      directives:
+        description: Install Zeal
+        allowPrerelease: true
+      settings:
+        id: OlegShparber.Zeal
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: QMK Toolbox
+      directives:
+        description: Install QMK Toolbox
+        allowPrerelease: true
+      settings:
+        id: QMK.QMKToolbox
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:

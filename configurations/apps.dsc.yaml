@@ -114,14 +114,6 @@ properties:
         id: Adobe.Acrobat.Reader.64-bit
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: OBSStudio
-      directives:
-        description: OBS Studio
-        allowPrerelease: true
-      settings:
-        id: OBSProject.OBSStudio
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: emClient
       directives:
         description: Install emClient
@@ -273,4 +265,35 @@ properties:
       settings:
         id: WinFsp.WinFsp
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: BluetoothBatteryMonitor
+      directives:
+        description: Install Bluetooth Battery Monitor
+        allowPrerelease: true
+      settings:
+        id: LuculentSystems.BluetoothBatteryMonitor
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Plexamp
+      directives:
+        description: Install Plexamp
+        allowPrerelease: true
+      settings:
+        id: Plex.Plexamp
+        source: winget
+    - resource: PSDscResources/Script
+      id: ComicRack CE
+      directives:
+        description: Script to install ComicRack CE
+        allowPrerelease: true
+      settings:
+        GetScript: |
+          # Not using this at the moment.
+        TestScript: |
+          return $false
+        SetScript: |
+          # Download the installer
+          Invoke-WebRequest -Uri "https://github.com/maforget/ComicRackCE/releases/download/nightly/ComicRackCESetup_nightly.exe" -OutFile "$env:TEMP\installer.exe"
+          # Run the installer
+          Start-Process "$env:TEMP\installer.exe" -ArgumentList "/silent" -Wait
   configurationVersion: 0.2.0

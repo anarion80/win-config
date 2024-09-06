@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Audacity
+      directives:
+        description: Install Audacity
+        allowPrerelease: true
+      settings:
+        id: Audacity.Audacity
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: OBSStudio
+      directives:
+        description: OBS Studio
+        allowPrerelease: true
+      settings:
+        id: OBSProject.OBSStudio
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Bambustudio
+      directives:
+        description: Bambustudio
+        allowPrerelease: true
+      settings:
+        id: Bambulab.Bambustudio
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Blender
+      directives:
+        description: Blender
+        allowPrerelease: true
+      settings:
+        id: BlenderFoundation.Blender
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: FreeCAD
+      directives:
+        description: FreeCAD
+        allowPrerelease: true
+      settings:
+        id: FreeCAD.FreeCAD
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: FreeCAD
+      directives:
+        description: FreeCAD
+        allowPrerelease: true
+      settings:
+        id: FreeCAD.FreeCAD
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: KiCAD
+      directives:
+        description: KiCAD
+        allowPrerelease: true
+      settings:
+        id: KiCad.KiCad
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Mp3Tag
+      directives:
+        description: Mp3Tag
+        allowPrerelease: true
+      settings:
+        id: FlorianHeidenreich.Mp3tag
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Zotero
+      directives:
+        description: Zotero
+        allowPrerelease: true
+      settings:
+        id: DigitalScholar.Zotero
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Nushell
+      directives:
+        description: Nushell
+        allowPrerelease: true
+      settings:
+        id: Nushell.Nushell
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Kdenlive
+      directives:
+        description: Kdenlive
+        allowPrerelease: true
+      settings:
+        id: KDE.Kdenlive
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Krita
+      directives:
+        description: Krita
+        allowPrerelease: true
+      settings:
+        id: KDE.Krita
+        source: winget
+  configurationVersion: 0.2.0
