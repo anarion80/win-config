@@ -4,6 +4,14 @@
 
 properties:
   resources:
+  - resource: Microsoft.WinGet.DSC/WinGetPackage
+    id: Git
+    directives:
+      description: Install Git
+      allowPrerelease: true
+    settings:
+      id: Git.Git
+      source: winget
   - resource: GitDsc/GitClone
     directives:
       description: 'Cloning: ansible-nas'
