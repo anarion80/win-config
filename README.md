@@ -8,10 +8,13 @@ Use the Windows Package Manager winget configure command to initiate the configu
 
 This repository contains my own WinGet Configuration files for different settings, perhaps it will be useful for you as well.
 
+> This is presented as is, tested only in Windows Sandbox. Use at your own risk :exclamation:
+
 ## Credits
 
 - [Atc.Winget.Configurations](https://github.com/atc-net/atc.winget.configurations)
 - [MrLacey's config](https://github.com/mrlacey/my-config)
+- [crutkas's setup](https://github.com/crutkas/setup)
 
 ## Requirements
 
