@@ -281,6 +281,22 @@ properties:
       settings:
         id: Plex.Plexamp
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Logitech Options
+      directives:
+        description: Logitech Options
+        allowPrerelease: true
+      settings:
+        id: Logitech.OptionsPlus
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Handbrake
+      directives:
+        description: Install Handbrake
+        allowPrerelease: true
+      settings:
+        id: HandBrake.HandBrake
+        source: winget
     - resource: PSDscResources/Script
       id: ComicRack CE
       directives:
