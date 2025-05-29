@@ -19,7 +19,7 @@ properties:
         description: Revert taskbar settings
         allowPrerelease: true
       settings:
-        Alignment: Middle # [KeepCurrentValue, Left]
+        Alignment: Left # [KeepCurrentValue, Left]
         HideLabelsMode: Always # [KeepCurrentValue, WhenFull, Never]
         SearchBoxMode: Hide # [KeepCurrentValue, ShowIconOnly, SearchBox, ShowIconAndLabel]
         TaskViewButton: Hide # [KeepCurrentValue, Show]
