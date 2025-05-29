@@ -346,6 +346,14 @@ properties:
       settings:
         id: mcmilk.7zip-zstd
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: LLVM
+      directives:
+        description: Install LLVM
+        allowPrerelease: true
+      settings:
+        id: LLVM.LLVM
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:
