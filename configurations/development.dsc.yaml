@@ -290,6 +290,62 @@ properties:
       settings:
         id: Neovim.Neovim
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Fzf
+      directives:
+        description: Install Fzf
+        allowPrerelease: true
+      settings:
+        id: junegunn.fzf
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: fd
+      directives:
+        description: Install fd
+        allowPrerelease: true
+      settings:
+        id: sharkdp.fd
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: RipGrep
+      directives:
+        description: Install RipGrep
+        allowPrerelease: true
+      settings:
+        id: BurntSushi.ripgrep.MSVC
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: LazyGit
+      directives:
+        description: Install LazyGit
+        allowPrerelease: true
+      settings:
+        id: JesseDuffield.lazygit
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Unzip
+      directives:
+        description: Install Unzip
+        allowPrerelease: true
+      settings:
+        id: GnuWin32.UnZip
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Wget2
+      directives:
+        description: Install Wget2
+        allowPrerelease: true
+      settings:
+        id: GNU.Wget2
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: 7zip
+      directives:
+        description: Install 7zip
+        allowPrerelease: true
+      settings:
+        id: mcmilk.7zip-zstd
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:
