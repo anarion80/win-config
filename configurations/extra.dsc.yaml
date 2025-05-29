@@ -42,14 +42,6 @@ properties:
         id: FreeCAD.FreeCAD
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: FreeCAD
-      directives:
-        description: FreeCAD
-        allowPrerelease: true
-      settings:
-        id: FreeCAD.FreeCAD
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: KiCAD
       directives:
         description: KiCAD
