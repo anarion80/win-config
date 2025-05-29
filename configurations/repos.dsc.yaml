@@ -19,8 +19,19 @@ properties:
       securityContext: current
     settings:
       httpsUrl: https://github.com/anarion80/ansible-nas.git
-      rootDirectory: 'C:\Users\anarion\Documents\repos\ansible-nas'
+      rootDirectory: 'C:\Users\anarion\Documents\repos'
     id: 'Clone ansible-nas: C:\Users\anarion\Documents\repos\ansible-nas'
     dependsOn:
-    - Git.Git
+    - Git
+  - resource: GitDsc/GitClone
+    directives:
+      description: 'Cloning: win-config'
+      allowPrerelease: true
+      securityContext: current
+    settings:
+      httpsUrl: https://github.com/anarion80/win-config.git
+      rootDirectory: 'C:\Users\anarion\Documents\repos'
+    id: 'Clone win-config: C:\Users\anarion\Documents\repos\win-config'
+    dependsOn:
+    - Git
   configurationVersion: 0.2.0
