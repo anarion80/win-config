@@ -282,6 +282,14 @@ properties:
       settings:
         id: QMK.QMKToolbox
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Neovim
+      directives:
+        description: Install Neovim
+        allowPrerelease: true
+      settings:
+        id: Neovim.Neovim
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:
