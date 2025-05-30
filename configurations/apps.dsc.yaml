@@ -297,6 +297,14 @@ properties:
       settings:
         id: HandBrake.HandBrake
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Logitech Unifying Software
+      directives:
+        description: Install Logitech Unifying Software
+        allowPrerelease: true
+      settings:
+        id: Logitech.UnifyingSoftware
+        source: winget
     - resource: PSDscResources/Script
       id: ComicRack CE
       directives:
