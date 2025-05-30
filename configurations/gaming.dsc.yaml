@@ -55,16 +55,6 @@ properties:
         id: Ubisoft.Connect
         source: winget
 
-# Moonlight
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Moonlight
-      directives:
-        description: Install Moonlight
-        allowPrerelease: true
-      settings:
-        id: MoonlightGameStreamingProject.Moonlight
-        source: winget
-
 # Sunshine
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Sunshine
