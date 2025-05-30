@@ -354,6 +354,14 @@ properties:
       settings:
         id: LLVM.LLVM
         source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ADB
+      directives:
+        description: Install ADB drivers
+        allowPrerelease: true
+      settings:
+        id: ClockworkMod.UniversalADBDriver
+        source: winget
     - resource: PSDscResources/Script
       id: VisualStudioCode Extensions
       directives:
